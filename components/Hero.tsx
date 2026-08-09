@@ -2,7 +2,6 @@
 
 import React from "react";
 import Image from "next/image";
-import { motion } from "framer-motion";
 
 export default function Hero() {
   const whatsappUrl = "https://wa.me/5492236689837?text=" + encodeURIComponent("Hola! Quisiera consultar sobre la bondiola artesanal Pájaro Azul.");
@@ -26,12 +25,7 @@ export default function Hero() {
       {/* Hero Content */}
       <div className="relative z-10 container mx-auto px-6 lg:px-16 text-center max-w-4xl">
         {/* Bird Sketch Emblem Badge */}
-        <motion.div
-          initial={{ opacity: 0, scale: 0.85 }}
-          animate={{ opacity: 1, scale: 1 }}
-          transition={{ duration: 0.8 }}
-          className="inline-flex flex-col items-center mb-6"
-        >
+        <div className="inline-flex flex-col items-center mb-6 transition-all duration-700">
           <div className="w-32 h-32 md:w-40 md:h-40 relative mb-4 p-3 rounded-full bg-white border-4 border-[#1e40af] shadow-2xl overflow-hidden ring-4 ring-[#d4af37]/40 flex items-center justify-center">
             <Image
               src="/images/bird-logo-exact.png"
@@ -43,44 +37,24 @@ export default function Hero() {
           <span className="text-xs uppercase tracking-[0.3em] text-[#d4af37] font-semibold bg-[#1c140e]/60 backdrop-blur-sm px-4 py-1 rounded-full border border-[#d4af37]/30 text-white">
             Fábrica Familiar de Chacinados
           </span>
-        </motion.div>
+        </div>
 
         {/* Main Brand Title in RYE Font */}
-        <motion.h1
-          initial={{ opacity: 0, y: 20 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.8, delay: 0.2 }}
-          className="text-5xl sm:text-7xl lg:text-8xl font-rye text-white tracking-wide drop-shadow-lg mb-3"
-        >
+        <h1 className="text-5xl sm:text-7xl lg:text-8xl font-rye text-white tracking-wide drop-shadow-lg mb-3">
           Pájaro Azul
-        </motion.h1>
+        </h1>
 
-        <motion.p
-          initial={{ opacity: 0, y: 20 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.8, delay: 0.3 }}
-          className="text-2xl sm:text-3xl font-serif italic text-[#fef08a] drop-shadow mb-6"
-        >
+        <p className="text-2xl sm:text-3xl font-serif italic text-[#fef08a] drop-shadow mb-6">
           El arte de esperar el sabor auténtico
-        </motion.p>
+        </p>
 
         {/* Subtitle Copy */}
-        <motion.p
-          initial={{ opacity: 0, y: 20 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.8, delay: 0.4 }}
-          className="text-base sm:text-lg text-white/95 font-sans font-normal leading-relaxed max-w-2xl mx-auto mb-10 drop-shadow-[0_2px_4px_rgba(0,0,0,0.7)]"
-        >
+        <p className="text-base sm:text-lg text-white/95 font-sans font-normal leading-relaxed max-w-2xl mx-auto mb-10 drop-shadow-[0_2px_4px_rgba(0,0,0,0.7)]">
           Elaboración artesanal de bondiola curada con paciencia, sal marina y especias seleccionadas. Tradición familiar directo del campo a tu mesa.
-        </motion.p>
+        </p>
 
         {/* Call To Actions */}
-        <motion.div
-          initial={{ opacity: 0, y: 20 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.8, delay: 0.6 }}
-          className="flex flex-col sm:flex-row items-center justify-center gap-4 sm:gap-6"
-        >
+        <div className="flex flex-col sm:flex-row items-center justify-center gap-4 sm:gap-6">
           <a
             href={whatsappUrl}
             target="_blank"
@@ -99,18 +73,14 @@ export default function Hero() {
           >
             <span>Conocé el Proceso</span>
           </a>
-        </motion.div>
+        </div>
       </div>
 
       {/* Bottom Scroll Indicator */}
       <div className="absolute bottom-6 left-1/2 -translate-x-1/2 z-10 flex flex-col items-center gap-2 text-[#5c4028] text-xs tracking-widest uppercase font-semibold">
         <span>Descubrí más</span>
         <div className="w-5 h-8 border-2 border-[#5c4028]/60 rounded-full flex justify-center p-1">
-          <motion.div
-            animate={{ y: [0, 10, 0] }}
-            transition={{ duration: 1.5, repeat: Infinity }}
-            className="w-1 h-2 bg-[#5c4028] rounded-full"
-          />
+          <div className="w-1 h-2 bg-[#5c4028] rounded-full animate-bounce" />
         </div>
       </div>
     </section>

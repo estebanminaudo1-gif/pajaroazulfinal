@@ -1,0 +1,70 @@
+@import "tailwindcss";
+
+@layer base {
+  :root {
+    --font-serif: 'Playfair Display', Georgia, serif;
+    --font-cinzel: 'Cinzel', serif;
+    --font-rye: 'Rye', cursive, serif;
+    --font-sans: 'Plus Jakarta Sans', system-ui, sans-serif;
+  }
+
+  body {
+    background-color: #faf6f0;
+    color: #2c221e;
+    font-family: var(--font-sans);
+  }
+
+  h1, h2, h3, h4, .font-display {
+    font-family: var(--font-serif);
+  }
+
+  .font-brand {
+    font-family: var(--font-cinzel);
+  }
+
+  .font-rye {
+    font-family: 'Rye', cursive, serif;
+  }
+}
+
+.bg-farm-cream {
+  background-color: #faf6f0;
+}
+
+.bg-farm-light {
+  background-color: #f4ebe1;
+}
+
+.card-farm {
+  background: #ffffff;
+  border: 1px solid #e2d5c5;
+  box-shadow: 0 10px 25px -5px rgba(60, 40, 20, 0.06);
+}
+
+.card-farm:hover {
+  border-color: #1e40af;
+  box-shadow: 0 15px 30px -5px rgba(30, 64, 175, 0.12);
+}
+
+.text-gold {
+  color: #b8860b;
+}
+
+.text-brand-blue {
+  color: #1e40af;
+}
+
+/* Custom scrollbar */
+::-webkit-scrollbar {
+  width: 8px;
+}
+::-webkit-scrollbar-track {
+  background: #f4ebe1;
+}
+::-webkit-scrollbar-thumb {
+  background: #cbbba8;
+  border-radius: 4px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: #a8947f;
+}

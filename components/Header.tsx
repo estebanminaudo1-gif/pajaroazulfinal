@@ -2,7 +2,6 @@
 
 import React, { useState, useEffect } from "react";
 import Image from "next/image";
-import { motion } from "framer-motion";
 
 export default function Header() {
   const [scrolled, setScrolled] = useState(false);
@@ -103,12 +102,7 @@ export default function Header() {
 
       {/* Mobile Drawer */}
       {mobileMenuOpen && (
-        <motion.div
-          initial={{ opacity: 0, y: -10 }}
-          animate={{ opacity: 1, y: 0 }}
-          exit={{ opacity: 0, y: -10 }}
-          className="md:hidden bg-[#FAF6F0] border-b border-[#e2d5c5] px-6 py-6 space-y-4 text-[#2C221E]"
-        >
+        <div className="md:hidden bg-[#FAF6F0] border-b border-[#e2d5c5] px-6 py-6 space-y-4 text-[#2C221E] transition-all">
           {navLinks.map((link) => (
             <a
               key={link.name}
@@ -128,7 +122,7 @@ export default function Header() {
           >
             Consultar por WhatsApp
           </a>
-        </motion.div>
+        </div>
       )}
     </header>
   );

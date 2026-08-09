@@ -1,7 +1,6 @@
 "use client";
 
 import React from "react";
-import { motion } from "framer-motion";
 
 const steps = [
   {
@@ -52,12 +51,8 @@ export default function Process() {
         {/* 5 Steps timeline cards */}
         <div className="grid grid-cols-1 md:grid-cols-3 lg:grid-cols-5 gap-6">
           {steps.map((step, idx) => (
-            <motion.div
+            <div
               key={step.number}
-              initial={{ opacity: 0, y: 30 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              viewport={{ once: true }}
-              transition={{ duration: 0.6, delay: idx * 0.12 }}
               className="bg-white border border-[#e2d5c5] rounded-xl p-6 hover:border-[#1e40af] transition-all hover:-translate-y-1 flex flex-col justify-between shadow-md hover:shadow-xl"
             >
               <div>
@@ -75,7 +70,7 @@ export default function Process() {
                 <span className="w-1.5 h-1.5 rounded-full bg-[#1e40af]" />
                 <span>Paso {idx + 1} de 5</span>
               </div>
-            </motion.div>
+            </div>
           ))}
         </div>
 
@@ -93,7 +88,7 @@ export default function Process() {
             href="https://wa.me/5492236689837?text=Hola!%20Quisiera%20consultar%20por%20pedidos%20de%20bondiola."
             target="_blank"
             rel="noopener noreferrer"
-            className="inline-flex items-center gap-3 bg-[#1e40af] hover:bg-[#1d4ed8] text-white px-7 py-3.5 rounded-full text-sm font-semibold uppercase tracking-wider transition-all whitespace-nowrap shadow-lg shadow-[#1e40af]/30"
+            className="inline-flex items-center gap-3 bg-[#1e40af] hover:bg-[#1d4ed8] text-white px-7 py-3.5 rounded-full text-sm font-semibold uppercase tracking-wider transition-all whitespace-nowrap shadow-lg shadow-[#1e40af]/30 hover:scale-105"
           >
             <span>Pedir por WhatsApp</span>
             <svg className="w-4 h-4 fill-current" viewBox="0 0 24 24">

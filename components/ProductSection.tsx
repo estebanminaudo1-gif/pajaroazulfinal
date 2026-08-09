@@ -2,7 +2,6 @@
 
 import React from "react";
 import Image from "next/image";
-import { motion } from "framer-motion";
 
 const products = [
   {
@@ -53,13 +52,9 @@ export default function ProductSection() {
 
         {/* Product Cards */}
         <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-          {products.map((item, index) => (
-            <motion.div
+          {products.map((item) => (
+            <div
               key={item.id}
-              initial={{ opacity: 0, y: 30 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              viewport={{ once: true }}
-              transition={{ duration: 0.7, delay: index * 0.15 }}
               className="bg-white border border-[#e2d5c5] rounded-2xl overflow-hidden hover:border-[#1e40af] transition-all duration-300 group shadow-md hover:shadow-xl flex flex-col justify-between"
             >
               <div>
@@ -106,7 +101,7 @@ export default function ProductSection() {
                   </svg>
                 </a>
               </div>
-            </motion.div>
+            </div>
           ))}
         </div>
 

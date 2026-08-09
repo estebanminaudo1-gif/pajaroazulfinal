@@ -2,7 +2,6 @@
 
 import React from "react";
 import Image from "next/image";
-import { motion } from "framer-motion";
 
 export default function StorySection() {
   return (
@@ -11,13 +10,7 @@ export default function StorySection() {
         <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
           
           {/* Card replicating reference label 2.png */}
-          <motion.div
-            initial={{ opacity: 0, y: 30 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: true }}
-            transition={{ duration: 0.8 }}
-            className="lg:col-span-6 bg-white border-2 border-[#1e40af] rounded-2xl p-8 sm:p-12 shadow-xl relative"
-          >
+          <div className="lg:col-span-6 bg-white border-2 border-[#1e40af] rounded-2xl p-8 sm:p-12 shadow-xl relative">
             {/* Fine vintage border accents */}
             <div className="absolute inset-3 border border-[#d4af37]/50 rounded-xl pointer-events-none" />
             
@@ -70,16 +63,10 @@ export default function StorySection() {
                 <span className="h-[1px] w-12 bg-[#1e40af]/60" />
               </div>
             </div>
-          </motion.div>
+          </div>
 
           {/* Right column: Editorial imagery of history & atmosphere */}
-          <motion.div
-            initial={{ opacity: 0, x: 30 }}
-            whileInView={{ opacity: 1, x: 0 }}
-            viewport={{ once: true }}
-            transition={{ duration: 0.8, delay: 0.2 }}
-            className="lg:col-span-6 space-y-6"
-          >
+          <div className="lg:col-span-6 space-y-6">
             <div className="inline-block">
               <span className="text-xs uppercase tracking-[0.25em] text-[#8c6239] font-bold">
                 Nuestra Identidad
@@ -120,7 +107,7 @@ export default function StorySection() {
                 </span>
               </div>
             </div>
-          </motion.div>
+          </div>
 
         </div>
       </div>

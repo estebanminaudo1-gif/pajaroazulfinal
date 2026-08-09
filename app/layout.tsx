@@ -1,5 +1,5 @@
 import React from "react";
-import "../styles/globals.css";
+import "./globals.css";
 import FloatingWhatsAppButton from "../components/FloatingWhatsAppButton";
 
 export const metadata = {

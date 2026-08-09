@@ -1,6 +1,7 @@
+"use client";
+
 import React from 'react';
 import Image from 'next/image';
-import { motion } from 'framer-motion';
 
 type Product = {
   id: string;
@@ -13,10 +14,7 @@ type Product = {
 
 export default function ProductCard({ product, onConsult }: { product: Product; onConsult?: (id: string) => void }) {
   return (
-    <motion.article
-      className="bg-white/5 rounded-lg overflow-hidden shadow-md hover:shadow-xl transition-shadow duration-300"
-      whileHover={{ scale: 1.02 }}
-    >
+    <article className="bg-white/5 rounded-lg overflow-hidden shadow-md hover:shadow-xl transition-all duration-300 transform hover:scale-[1.02]">
       <div className="relative w-full h-56">
         <Image src={product.image} alt={product.name} fill style={{ objectFit: 'cover' }} className="" />
       </div>
@@ -37,6 +35,6 @@ export default function ProductCard({ product, onConsult }: { product: Product; 
           </button>
         </div>
       </div>
-    </motion.article>
+    </article>
   );
 }
